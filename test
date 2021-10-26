@@ -1,0 +1,36 @@
+# python 3.8.0
+# Программа для корректного вывода: 21год 22года 25лет и тд
+# По условию задачи возраст не превышает 120
+
+
+print('Привет введи свой возраст')
+age = input()
+
+agelen = len(str(age))
+ageInt = int(age)
+
+
+def gg(ageInteger):
+    if ageInteger in range(2, 5):
+        print('Вам {0} года'.format(ageInt))
+
+    if ageInteger in range(5, 10) or ageInteger == 0:
+        print('Вам {0} лет'.format(ageInt))
+    if ageInteger == 1:
+        print('Вам {0} год'.format(ageInt))
+
+
+if agelen == 1:
+    gg(ageInt)
+
+if agelen == 2:
+    if ageInt in range(10, 21):
+        print('Вам {0} лет'.format(ageInt))
+    else:
+        gg(int(ageInt % 10))
+
+if agelen == 3:
+    if ageInt in range(105, 121):
+        print('Вам {0} лет'.format(ageInt))
+    else:
+        gg(int(ageInt % 10))
